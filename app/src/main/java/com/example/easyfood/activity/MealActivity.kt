@@ -52,8 +52,8 @@ class MealActivity : AppCompatActivity() {
     private fun onFavoriteClick() {
         binding.btnAddToFav.setOnClickListener {
             mealToSave?.let {
-                mealMvvm.insertMeal(mealToSave!!)
                 Toast.makeText(this, "Favorite added", Toast.LENGTH_SHORT).show()
+                mealMvvm.insertMeal(mealToSave!!)
             }
         }
     }

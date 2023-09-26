@@ -13,7 +13,7 @@ class MealAdapter : RecyclerView.Adapter<MealAdapter.FavoriteMealViewHolder>() {
 
     inner class FavoriteMealViewHolder(val binding: ItemMealBinding) : RecyclerView.ViewHolder(binding.root)
 
-    lateinit var onItemClick : ((Meal) -> Unit)
+    var onItemClick : ((Meal) -> Unit)?=null
 
     private val diffUtil =object: ItemCallback<Meal>(){
         override fun areItemsTheSame(oldItem: Meal, newItem: Meal): Boolean {
@@ -40,7 +40,7 @@ class MealAdapter : RecyclerView.Adapter<MealAdapter.FavoriteMealViewHolder>() {
         Glide.with(holder.itemView).load(meal.strMealThumb).into(holder.binding.imgMeal)
         holder.binding.tvMealName.text=meal.strMeal
         holder.itemView.setOnClickListener {
-            onItemClick.invoke(meal)
+            onItemClick?.invoke(meal)
         }
     }
 }

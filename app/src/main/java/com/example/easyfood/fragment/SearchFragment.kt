@@ -1,5 +1,6 @@
 package com.example.easyfood.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.easyfood.activity.MainActivity
+import com.example.easyfood.activity.MealActivity
 import com.example.easyfood.adapter.MealAdapter
 import com.example.easyfood.databinding.FragmentSearchBinding
 import com.example.easyfood.viewmodel.HomeViewModel
@@ -66,6 +68,16 @@ class SearchFragment : Fragment() {
         }
 
         binding.edtSearch.addTextChangedListener(textWatcher)
+
+        searchMealsAdapter.onItemClick ={
+            val intent = Intent(activity, MealActivity::class.java)
+            intent.apply {
+                putExtra(HomeFragment.MEAL_ID, it.idMeal)
+                putExtra(HomeFragment.MEAL_NAME, it.strMeal)
+                putExtra(HomeFragment.MEAL_THUMP, it.strMealThumb)
+            }
+            startActivity(intent)
+        }
 
     }
 
