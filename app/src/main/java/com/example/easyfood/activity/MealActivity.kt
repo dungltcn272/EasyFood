@@ -13,7 +13,7 @@ import com.example.easyfood.R
 import com.example.easyfood.databinding.ActivityMealBinding
 import com.example.easyfood.db.MealDatabase
 import com.example.easyfood.fragment.HomeFragment
-import com.example.easyfood.pojo.Meal
+import com.example.easyfood.model.Meal
 import com.example.easyfood.viewmodel.MealViewModel
 import com.example.easyfood.viewmodel.MealViewModelFactory
 

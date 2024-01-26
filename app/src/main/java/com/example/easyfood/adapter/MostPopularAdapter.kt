@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.easyfood.databinding.ItemPopularBinding
-import com.example.easyfood.pojo.Meal
-import com.example.easyfood.pojo.MealByCategory
+import com.example.easyfood.model.MealByCategory
 
 class MostPopularAdapter: RecyclerView.Adapter<MostPopularAdapter.PopularMealViewHolder>() {
 

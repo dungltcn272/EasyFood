@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil.ItemCallback
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.easyfood.databinding.ItemMealBinding
-import com.example.easyfood.pojo.Meal
+import com.example.easyfood.model.Meal
 
 class MealAdapter : RecyclerView.Adapter<MealAdapter.FavoriteMealViewHolder>() {
 

@@ -105,13 +105,14 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-    
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btnYoutube"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
         android:src="@drawable/ic_youtube"
         android:layout_gravity="bottom|center"
+        android:scaleType="fitXY"
         android:layout_marginBottom="@dimen/_10sdp"/>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator

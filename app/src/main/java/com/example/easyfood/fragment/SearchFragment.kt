@@ -16,7 +16,6 @@ import com.example.easyfood.adapter.MealAdapter
 import com.example.easyfood.databinding.FragmentSearchBinding
 import com.example.easyfood.viewmodel.HomeViewModel
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SearchFragment : Fragment() {
@@ -56,14 +55,13 @@ class SearchFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                searchJob?.cancel()
+                searchJob = lifecycleScope.launch {
+                    viewModel.searchMeals(s.toString())
+                }
             }
 
             override fun afterTextChanged(s: Editable?) {
-                searchJob?.cancel()
-                searchJob = lifecycleScope.launch {
-                    delay(300)
-                    viewModel.searchMeals(s.toString())
-                }
             }
         }
 

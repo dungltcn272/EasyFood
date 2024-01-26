@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.easyfood.databinding.ItemMealBinding
-import com.example.easyfood.pojo.MealByCategory
+import com.example.easyfood.model.MealByCategory
 
 class CategoryMealAdapter : RecyclerView.Adapter<CategoryMealAdapter.CategoryMealViewHolder>(){
 

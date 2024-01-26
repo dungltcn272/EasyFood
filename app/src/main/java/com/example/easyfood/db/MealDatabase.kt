@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.easyfood.pojo.Meal
+import com.example.easyfood.model.Meal
 
 @Database(entities = [Meal::class], version = 1)
 @TypeConverters(MealTypeConvertor::class)

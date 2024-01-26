@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.easyfood.db.MealDatabase
-import com.example.easyfood.pojo.Meal
-import com.example.easyfood.pojo.MealList
+import com.example.easyfood.model.Meal
+import com.example.easyfood.model.MealList
 import com.example.easyfood.retrofit.RetrofitInstance
 import kotlinx.coroutines.launch
 import retrofit2.Call
