@@ -117,11 +117,14 @@ class HomeFragment : Fragment() {
 
     private fun onPopularItemClick() {
         popularItemAdapter.onItemClick = {
-            val intent =Intent(activity, MealActivity::class.java)
-            intent.putExtra(MEAL_ID, it.idMeal)
-            intent.putExtra(MEAL_NAME, it.strMeal)
-            intent.putExtra(MEAL_THUMP, it.strMealThumb)
-            startActivity(intent)
+            Intent(activity,MealActivity::class.java).also {
+                it.putExtra(MEAL_ID, randomMeal.idMeal)
+                it.putExtra(MEAL_NAME, randomMeal.strMeal)
+                it.putExtra(MEAL_THUMP, randomMeal.strMealThumb)
+                if (randomMeal.strMeal != null && randomMeal.strMealThumb !=null){
+                    startActivity(it)
+                }
+            }
         }
     }
 
@@ -132,11 +135,15 @@ class HomeFragment : Fragment() {
 
     private fun onRandomMealClick() {
         binding.cardRandomMeal.setOnClickListener{
-            val intent =Intent(activity,MealActivity::class.java)
-            intent.putExtra(MEAL_ID, randomMeal.idMeal)
-            intent.putExtra(MEAL_NAME, randomMeal.strMeal)
-            intent.putExtra(MEAL_THUMP, randomMeal.strMealThumb)
-            startActivity(intent)
+            Intent(activity,MealActivity::class.java).also {
+                it.putExtra(MEAL_ID, randomMeal.idMeal)
+                it.putExtra(MEAL_NAME, randomMeal.strMeal)
+                it.putExtra(MEAL_THUMP, randomMeal.strMealThumb)
+                if (randomMeal.strMeal != null && randomMeal.strMealThumb !=null){
+                    startActivity(it)
+                }
+            }
+
         }
     }
 
