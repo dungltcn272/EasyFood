@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.easyfood'
+    namespace 'com.dungltcn272.easyfood'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.easyfood"
+        applicationId "com.dungltcn272.easyfood"
         minSdk 29
         targetSdk 34
         versionCode 1
